@@ -7,8 +7,9 @@ public class TicTacToe {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String start;
+		String player;
 		char[] [] BOARD = {{' ','|',' ','|',' '},
-			           {'-','+','-','+','-'},
+				   {'-','+','-','+','-'},
 		                   {' ','|',' ','|',' '},
 		                   {'-','+','-','+','-'},
 		                   {' ','|',' ','|',' '}};
@@ -22,8 +23,13 @@ public class TicTacToe {
 		}while(!start.equals("Y"));
 			
 		theBOARD(BOARD);
-			
 		
+		do {
+		System.out.println("What you choose ? X/O");
+		
+		player = scanner.nextLine().toUpperCase();
+			
+		}while(!(player.equals("X") || player.equals("O"))); //Law of De Morgan!
 		}
 	
 	public static void theBOARD(char[][] BOARD) {
@@ -36,3 +42,4 @@ public class TicTacToe {
 		}
 	
 }
+
