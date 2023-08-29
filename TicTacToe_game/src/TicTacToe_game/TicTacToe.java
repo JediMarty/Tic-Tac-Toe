@@ -7,10 +7,10 @@ public class TicTacToe {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String start;
-		String player;
+		char player;
 		int set;
 		char[] [] BOARD = {{' ','|',' ','|',' '},
-				   {'-','+','-','+','-'},
+			           {'-','+','-','+','-'},
 		                   {' ','|',' ','|',' '},
 		                   {'-','+','-','+','-'},
 		                   {' ','|',' ','|',' '}};
@@ -28,9 +28,9 @@ public class TicTacToe {
 		do {
 		System.out.println("What you choose ? X/O");
 		
-		player = scanner.nextLine().toUpperCase();
+		player = scanner.next().charAt(0);
 			
-		}while(!(player.equals("X") || player.equals("O")));
+		}while(!(player=='X' || player=='O'));
 		System.out.println("Position ? 1-9");
 		set = scanner.nextInt();
 		place(BOARD,player,set);	
@@ -45,13 +45,17 @@ public class TicTacToe {
 				System.out.println();
 				}
 		}
-	public static void place(char[] [] BOARD, String player, int set) {
+	
+	public static void place(char[] [] BOARD, char player, int set) {
+		
 		switch(set) {
 		case 1:
-		BOARD[0][0] = 'X';
-		break;
+			BOARD[0][0] = player;
+			break;
+			
 		}
 		
 	}
 }
+
 
