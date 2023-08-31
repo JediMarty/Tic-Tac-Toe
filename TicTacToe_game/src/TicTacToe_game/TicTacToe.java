@@ -10,7 +10,7 @@ public class TicTacToe {
 		char player;
 		int set;
 		char[] [] BOARD = {{' ','|',' ','|',' '},
-				           {'-','+','-','+','-'},
+				   {'-','+','-','+','-'},
 		                   {' ','|',' ','|',' '},
 		                   {'-','+','-','+','-'},
 		                   {' ','|',' ','|',' '}};
@@ -26,10 +26,11 @@ public class TicTacToe {
 		theBOARD(BOARD);
 	
 		do {
-		System.out.println("What you choose ? X/O");
-		
-		player = scanner.next().charAt(0);
 			
+			System.out.println("What you choose ? X/O");
+			player = scanner.next().charAt(0);
+			player=Character.toUpperCase(player);
+		
 		}while(!(player=='X' || player=='O'));
 		System.out.println("Position ? 1-9");
 		set = scanner.nextInt();
