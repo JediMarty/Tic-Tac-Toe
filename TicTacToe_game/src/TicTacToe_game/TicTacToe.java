@@ -10,7 +10,7 @@ public class TicTacToe {
 		char player;
 		int set;
 		char[] [] BOARD = {{' ','|',' ','|',' '},
-			           {'-','+','-','+','-'},
+				           {'-','+','-','+','-'},
 		                   {' ','|',' ','|',' '},
 		                   {'-','+','-','+','-'},
 		                   {' ','|',' ','|',' '}};
@@ -52,7 +52,30 @@ public class TicTacToe {
 		case 1:
 			BOARD[0][0] = player;
 			break;
-			
+		case 2:
+			BOARD[0][2] = player;
+			break;
+		case 3:
+			BOARD[0][4] = player;
+			break;
+		case 4:
+			BOARD[2][0] = player;
+			break;
+		case 5:
+			BOARD[2][2] = player;
+			break;
+		case 6:
+			BOARD[2][4] = player;
+			break;
+		case 7:
+			BOARD[4][0] = player;
+			break;
+		case 8:
+			BOARD[4][2] = player;
+			break;
+		case 9:
+			BOARD[4][4] = player;
+			break;
 		}
 		
 	}
