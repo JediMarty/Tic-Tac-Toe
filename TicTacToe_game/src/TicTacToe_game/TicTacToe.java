@@ -1,5 +1,6 @@
 package TicTacToe_game;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -7,8 +8,11 @@ public class TicTacToe {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String start;
+		char bot;
 		char player;
 		int set;
+		Random rand = new Random();
+		int setr = rand.nextInt(10) + 1;
 		char[] [] BOARD = {{' ','|',' ','|',' '},
 				   {'-','+','-','+','-'},
 		                   {' ','|',' ','|',' '},
@@ -32,9 +36,17 @@ public class TicTacToe {
 			player=Character.toUpperCase(player);
 		
 		}while(!(player=='X' || player=='O'));
+		if (player == 'X') {
+			bot = 'O';
+			}
+		else {
+			bot= 'X';
+			}
+		
 		System.out.println("Position ? 1-9");
 		set = scanner.nextInt();
 		place(BOARD,player,set);	
+		place(BOARD,bot,setr);
 		theBOARD(BOARD);
 	}
 	
@@ -81,5 +93,6 @@ public class TicTacToe {
 		
 	}
 }
+
 
 
