@@ -45,8 +45,8 @@ public class TicTacToe {
 		
 		System.out.println("Position ? 1-9");
 		set = scanner.nextInt();
-		place(BOARD,player,set);	
-		place(BOARD,bot,setr);
+		place(BOARD,player,set); // person turn	
+		place(BOARD,bot,setr); // computer turn
 		theBOARD(BOARD);
 	}
 	
