@@ -48,6 +48,7 @@ public class TicTacToe {
 		place(BOARD,player,set); // person turn	
 		place(BOARD,bot,setr); // computer turn
 		theBOARD(BOARD);
+		scanner.close();
 	}
 	
 	public static void theBOARD(char[][] BOARD) {
